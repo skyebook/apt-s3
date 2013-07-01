@@ -1,3 +1,15 @@
+apt-transport-s3 (1.1.1ubuntu5) precise; urgency=low
+
+  * Add debhelper misc:Depends
+
+ -- Skye Book <skye.book@gmail.com> Mon, 01 July 2013 17:05:30 -0400
+
+apt-transport-s3 (1.1.1ubuntu4) precise; urgency=low
+
+  * Touch changelog
+
+ -- Skye Book <skye.book@gmail.com> Mon, 01 July 2013 14:40:34 -0400
+
 apt-transport-s3 (1.1.1ubuntu2) precise; urgency=low
 
   * Modified for company needs
