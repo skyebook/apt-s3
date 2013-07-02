@@ -1,3 +1,9 @@
+apt-transport-s3 (1.1.1ubuntu6) precise; urgency=low
+
+  * Change architecture to AMD64
+
+ -- Skye Book <skye.book@gmail.com> Mon, 02 July 2013 11:04:17 -0400
+
 apt-transport-s3 (1.1.1ubuntu5) precise; urgency=low
 
   * Add debhelper misc:Depends
