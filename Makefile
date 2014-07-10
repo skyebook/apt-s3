@@ -13,3 +13,5 @@ clean:
 deb:
 	dpkg-buildpackage -us -uc
 
+signed-deb:
+	debuild -S -sd
