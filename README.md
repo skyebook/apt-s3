@@ -17,7 +17,13 @@ Before building this project on Ubuntu (tested on 11.10) you will need to instal
 To build this project you simply run `make`. It will produce a binary named `s3` under the `src/` dir.
 
 ## Installing
+### PPA
 
+    sudo add-apt-repository ppa:leonard-ehrenfried/apt-transport-s3
+    sudo apt-get update
+    sudo apt-get install apt-transport-s3
+
+### Manually
 Once compiled, the resulting s3 binary must be placed in /usr/lib/apt/methods/ along with the other protocol binaries.
 
 Finally, this is how you add it to the /etc/apt/sources.list file if you want your credentials in the url:
