@@ -1,3 +1,9 @@
+apt-transport-s3 (1.1.1ubuntu7) trusty; urgency=medium
+
+  * Upgrade to trusty
+
+ -- Leonard Ehrenfried <leonard.ehrenfried@gmail.com>  Thu, 10 Jul 2014 23:03:48 +0000
+
 apt-transport-s3 (1.1.1ubuntu6) precise; urgency=low
 
   * Change architecture to AMD64
