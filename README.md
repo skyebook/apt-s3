@@ -24,9 +24,9 @@ To build this project you simply run `make`. It will produce a binary named `s3`
     sudo apt-get install apt-transport-s3
 
 ### Manually
-Once compiled, the resulting s3 binary must be placed in /usr/lib/apt/methods/ along with the other protocol binaries.
+Once compiled, the resulting s3 binary must be placed in `/usr/lib/apt/methods/` along with the other protocol binaries.
 
-Finally, this is how you add it to the /etc/apt/sources.list file if you want your credentials in the url:
+Finally, this is how you add it to the `/etc/apt/sources.list` file if you want your credentials in the url:
 
     deb s3://AWS_ACCESS_ID:[AWS_SECRET_KEY_IN_BRACKETS]@s3-ENDPOINT.amazonaws.com/BUCKETNAME prod main
 
@@ -35,6 +35,13 @@ otherwise leave off the credentials and it will draw them from the environment v
 Simply upload all of your .deb packages and Packages.gz file into the s3 bucket you chose with the file key mapping that matches the file system layout.
 
 ## Uploading repository to s3
+
+### Without local mirror
+[deb-s3](https://github.com/krobertson/deb-s3) allows you to create an APT 
+repository without constructing it locally first. All you need is a deb file
+and it will take care of the rest.
+
+### With local mirror
 
 Before synchronization, you need a s3cmd tool installed and configured:
 
@@ -46,7 +53,8 @@ To synchronize local repository to s3 as read-only, execute:
 
     s3cmd sync /srv/apt-repo-dir/dists s3://bucket_name
     s3cmd sync /srv/apt-repo-dir/pool s3://bucket_name
-    
+
+
 ## Using GPG keys
 
 If you're signing you repository with key, export it to server:
